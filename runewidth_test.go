@@ -62,7 +62,7 @@ func TestTableChecksums(t *testing.T) {
 	check(combining, 2097, "b1dabe5f35b7ccf868999bf6df6134f346ae14a4eb16f22e1dc8a98240ba1b53")
 	check(doublewidth, 180993, "06f5d5d5ebb8b9ee74fdf6003ecfbb313f9c042eb3cb4fce2a9e06089eb68dda")
 	check(ambiguous, 138739, "d05e339a10f296de6547ff3d6c5aee32f627f6555477afebd4a3b7e3cf74c9e3")
-	check(emoji, 1236, "9b2d75cf8ca48c5075c525a92ce5cf2608fa451c589f33d7d153e9df93f4e2f7")
+	check(emoji, 1235, "1dec05c612f5a1ba931f46718f4d7668ccb4a5edbbc668a2adc899b48b6cf73f")
 	check(notassigned, 846357, "b06b7acc03725de394d92b09306aa7a9c0c0b53f36884db4c835cbb04971e421")
 	check(neutral, 25561, "87fffca79a3a6d413d23adf1c591bdcc1ea5d906d0d466b12a76357bbbb74607")
 }
@@ -135,6 +135,7 @@ var runewidthtests = []struct {
 	{'ｶ', 1, 1},
 	{'ｲ', 1, 1},
 	{'☆', 1, 2}, // double width in ambiguous
+	{'™', 1, 2},
 	{'\x00', 0, 0},
 	{'\x01', 0, 0},
 	{'\u0300', 0, 0},

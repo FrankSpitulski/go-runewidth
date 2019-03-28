@@ -1,3 +1,3 @@
-module github.com/mattn/go-runewidth
+module github.com/FrankSpitulski/go-runewidth
 
 go 1.9
